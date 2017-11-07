@@ -26,4 +26,7 @@
 	<!-- 引用服务 -->
 	<dubbo:reference interface="cn.e3mall.manager.service.ItemService"
 		id="itemService" timeout="1000000" retries="2"/>
+	<!-- 引用服务 -->
+	<dubbo:reference interface="cn.e3mall.manager.service.ItemCatService"
+		id="itemCatService" timeout="1000000" retries="2"/>
 </beans>
