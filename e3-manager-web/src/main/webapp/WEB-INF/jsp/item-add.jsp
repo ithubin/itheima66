@@ -1,5 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <jsp:include page="${pageContext.request.contextPath }/layout/inc.jsp"></jsp:include>
+<style>
+<!--
+
+-->
+tr{
+	font-size: 12px;
+}
+</style>
 <div style="padding:10px 10px 10px 10px">
 	<form id="itemAddForm" class="itemForm" method="post">
 	    <table cellpadding="5">
