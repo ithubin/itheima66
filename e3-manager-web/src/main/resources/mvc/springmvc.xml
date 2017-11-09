@@ -17,6 +17,9 @@
 	http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
 	http://www.springframework.org/schema/util
 	http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+	
+	<context:property-placeholder location="classpath:resources.properties"/>
+	
 	<!-- 一,扫描controller -->
 	<context:component-scan base-package="cn.e3mall.manager"></context:component-scan>
 	<!-- 放行静态资源 -->
@@ -27,5 +30,9 @@
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/jsp/"></property>
 		<property name="suffix" value=".jsp"></property>
+	</bean>
+	<!-- 文件上传解析器 -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="10240000"></property>
 	</bean>
 	</beans>

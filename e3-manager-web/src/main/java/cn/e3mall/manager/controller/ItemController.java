@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import cn.e3mall.manager.service.ItemService;
 import cn.e3mall.pojo.TbItem;
+import cn.e3mall.pojo.TbItemDesc;
+import cn.e3mall.utils.E3mallResult;
 import cn.e3mall.utils.PageBeanResult;
 
 @Controller
@@ -57,7 +59,19 @@ public class ItemController {
 	}
 	
 	
-	
+	/**
+	 * 需求:保存商品数据
+	 * 请求:/item/save
+	 * 参数:TbItem item,TbItemDesc itemDesc
+	 * 返回值:E3mallResult
+	 */
+	@RequestMapping("/item/save")
+	@ResponseBody
+	public E3mallResult saveItem(TbItem item,TbItemDesc itemDesc){
+		//调用远程service服务方法,保存商品
+		E3mallResult result = itemService.saveItem(item, itemDesc);
+		return result;
+	}
 	
 	
 	
