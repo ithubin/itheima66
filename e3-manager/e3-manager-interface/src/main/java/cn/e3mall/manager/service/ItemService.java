@@ -1,6 +1,8 @@
 package cn.e3mall.manager.service;
 
 import cn.e3mall.pojo.TbItem;
+import cn.e3mall.pojo.TbItemDesc;
+import cn.e3mall.utils.E3mallResult;
 import cn.e3mall.utils.PageBeanResult;
 
 public interface ItemService {
@@ -16,4 +18,10 @@ public interface ItemService {
 	 * 返回值:PageBeanResult
 	 */
 	public PageBeanResult findItemByPage(Integer page,Integer rows);
+	/**
+	 * 需求:保存商品数据
+	 * 参数:TbItem item,TbItemDesc itemDesc
+	 * 返回值:E3mallResult
+	 */
+	public E3mallResult saveItem(TbItem item,TbItemDesc itemDesc);
 }
