@@ -1,4 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<style>
+<!--
+
+-->
+tr{font-size: 12px;}
+</style>
 <div style="padding:10px 10px 10px 10px">
 	<form id="contentAddForm" class="itemForm" method="post">
 		<input type="hidden" name="categoryId"/>
@@ -8,7 +14,7 @@
 	            <td><input class="easyui-textbox" type="text" name="title" data-options="required:true" style="width: 280px;"></input></td>
 	        </tr>
 	        <tr>
-	            <td>内容子标题:</td>
+	            <td style="white-space: nowrap;">内容子标题:</td>
 	            <td><input class="easyui-textbox" type="text" name="subTitle" style="width: 280px;"></input></td>
 	        </tr>
 	        <tr>

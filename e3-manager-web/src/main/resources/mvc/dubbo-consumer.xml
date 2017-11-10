@@ -29,4 +29,11 @@
 	<!-- 引用服务 -->
 	<dubbo:reference interface="cn.e3mall.manager.service.ItemCatService"
 		id="itemCatService" timeout="1000000" retries="2"/>
+	<!-- 引用内容分类服务 -->
+	<dubbo:reference interface="cn.e3mall.content.service.ContentCategoryService"
+		id="contentCategoryService" timeout="1000000" retries="2"/>
+	
+	<!-- 引用内容分类服务 -->
+	<dubbo:reference interface="cn.e3mall.content.service.ContentService"
+		id="contentService" timeout="1000000" retries="2"/>
 </beans>
