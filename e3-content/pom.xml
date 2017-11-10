@@ -1,0 +1,44 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>cn.e3mall</groupId>
+    <artifactId>e3-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>cn.e3mall</groupId>
+  <artifactId>e3-content</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <modules>
+  	<module>e3-content-interface</module>
+  	<module>e3-content-service</module>
+  </modules>
+  <!--
+  	 内容管理系统 CMS: 聚合父工程 
+  	1,抽取公共坐标   common
+  	2,统一管理子工程(打包,部署,启动)	  	 
+  -->
+  <dependencies>
+		<dependency>
+			<groupId>cn.e3mall</groupId>
+			<artifactId>e3-common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<!-- 把项目发布到tomcat服务器根目录: webapps/ROOT/  -->
+					<path>/</path>
+					<!-- 项目启动端口 -->
+					<port>8083</port>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+  
+</project>
